@@ -1,5 +1,5 @@
 {
-  "name": "task_1",
+  "name": "task_2",
   "version": "1.0.0",
   "description": "Basic setup",
   "main": "dashboard_main.js",
@@ -15,7 +15,9 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "css-loader": "^6.6.0",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "style-loader": "^3.3.1"
   }
 }
