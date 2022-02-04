@@ -3,14 +3,10 @@
     height: 200px;
     background: url('../assets/holberton-logo.jpg');
     background-position: center;
-    background-position: contain;
+    background-size: 200px 200px;
 }
 
-button {
-    text-align: right;
-}
-
-button > span {
-    font-style: normal;
+#count {
     font-weight: bold;
+    display: inline;
 }
