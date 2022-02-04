@@ -8,7 +8,9 @@ module.exports = {
   },
   mode: 'production',
   performance: {
-    maxAssetSize: 100000,
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   module: {
       rules: [
@@ -19,7 +21,11 @@ module.exports = {
         {
           test: /\.jpg$/,
           use: {
-            loader: 'file-loader'
+            loader: 'file-loader',
+            options: {
+              bypassOnDebug: true,
+              disable: true,
+            },
           }
         }
       ]
