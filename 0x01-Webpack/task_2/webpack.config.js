@@ -7,6 +7,9 @@ module.exports = {
     filename: 'bundle.js'
   },
   mode: 'production',
+  performance: {
+    maxAssetSize: 100000,
+  },
   module: {
       rules: [
         {
