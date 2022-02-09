@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack",
-    "start-dev": "webpack-dev-server --open",
+    "test": "jest",
+    "build": "webpack --config ./config/webpack.config.js",
+    "start-dev": "webpack serve -c ./config/webpack.config.js --open",
     "start": "webpack-dev-server --mode development --config config/webpack.config.js"
   },
   "keywords": [],
