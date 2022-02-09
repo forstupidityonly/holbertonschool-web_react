@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '/dist'),
     filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
@@ -26,23 +26,13 @@ module.exports = {
       {
         test: /\.js|\.jsx$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        loader: "babel-loader",
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
-      }
+        type: 'asset/resource',
+        loader: 'image-webpack-loader',
+      },
     ]
   },
 };
