@@ -9,8 +9,14 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     hot: true,
+    compress: true,
   },
-  mode: 'production',
+  mode: 'development',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   module: {
     rules: [
       {
