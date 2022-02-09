@@ -4,11 +4,11 @@ import App from './App/App';
 import Notifications from './Notifications/Notifications';
 
 ReactDOM.render(
-  <div>
+  <React.StrictMode>
     <div className="root-notifications">
       <Notifications />
     </div>
     <App />
-  </div>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
