@@ -3,11 +3,12 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve('./dist'),
     filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
   devServer: {
+    port: 3000,
     hot: true,
     compress: true,
   },
