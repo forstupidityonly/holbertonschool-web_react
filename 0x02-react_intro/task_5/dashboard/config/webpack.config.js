@@ -18,6 +18,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.js|\.jsx$/,
+        exclude: /node_modules/,
+        loader: ‘babel-loader’,
+      },
+      {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           'file-loader',
