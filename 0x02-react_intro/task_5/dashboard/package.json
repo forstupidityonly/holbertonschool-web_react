@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "build": "webpack --config ./config/webpack.config.js",
-    "start-dev": "webpack serve -c ./config/webpack.config.js --open",
-    "start": "webpack-dev-server --mode development --config config/webpack.config.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Corbin VanDeventer",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
