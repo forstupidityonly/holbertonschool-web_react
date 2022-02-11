@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --config ./config/webpack.config.js",
-    "start-dev": "webpack serve -c ./config/webpack.config.js --open",
-    "start": "webpack-dev-server --mode development --config config/webpack.config.js"
+    "start": "webpack serve -c ./config/webpack.config.js --open",
+    "start-dev": "webpack-dev-server --mode development --config config/webpack.config.js"
   },
   "keywords": [],
   "author": "Corbin VanDeventer",
