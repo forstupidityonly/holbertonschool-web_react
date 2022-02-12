@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.App-body {
+  color: #000000;
+  font-weight: bold;
+  min-height: 60vmin;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  margin-left: 20px;
+}
+
+.form, .App-body p {
+  display: flex;
+  flex-direction: left;
+}
+
