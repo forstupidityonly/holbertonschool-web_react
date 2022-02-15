@@ -1,0 +1,48 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "webpack --config ./config/webpack.config.js",
+    "start": "webpack serve -c ./config/webpack.config.js --open",
+    "start-dev": "webpack-dev-server --mode development --config config/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Corbin VanDeventer",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "css-loader": "^6.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^27.5.1",
+    "jest-transform-stub": "^2.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-loader": "^2.4.7",
+    "style-loader": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}
