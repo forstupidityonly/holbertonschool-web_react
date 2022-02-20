@@ -13,23 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
   }
-
-  componentDidMount() {
-    let keysPressed = {};
-    let myListener = document.addEventListener('keydown', (event) => {
-      keysPressed[event.key] = true;
-      if (keysPressed['Control'] && keysPressed['h']) {
-        alert('Logging you out');
-        this.props.logOut();
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener(myListener);
-    console.log('unmounted?');
-  }
-
+  
   render () {
 
     const listCourses = [
