@@ -42,8 +42,4 @@ describe('Test App', () => {
     expect(wrapper.find(CourseList)).toHaveLength(1);
   });
 
-  it('check ctr + h pressed does correct stuff', () => {
-    const 
-  });
-
 });
