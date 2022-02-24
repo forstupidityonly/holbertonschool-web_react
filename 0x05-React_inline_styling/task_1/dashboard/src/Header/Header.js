@@ -5,8 +5,8 @@ import { StyleSheet, css } from 'aphrodite';
 function Header() {
   return (
     <div className="Header">
-      <div className={css(styles.AppHeader)}>
-        <img src={logo} className={css(styles.AppLogo)}  alt="logo" />
+      <div className={css(styles.Header)}>
+        <img src={logo} className={css(styles.Logo)}  alt="logo" />
         <h1>School dashboard</h1>
       </div>
     </div>
@@ -14,11 +14,11 @@ function Header() {
 }
 
 const styles = StyleSheet.create({
-  AppLogo: {
+  Logo: {
     height: "20vmin",
     pointerEvents: "none",
   },
-  AppHeader: {
+  Header: {
     alignItems: "center",
     fontSize: "calc(10px + 2vmin)",
     color: "#df344b",
