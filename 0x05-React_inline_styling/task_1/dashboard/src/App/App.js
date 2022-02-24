@@ -70,7 +70,7 @@ class App extends React.Component {
             <BodySection title="News from the School">
               <p>some random text</p>
             </BodySection>
-            <Footer />
+            <Footer className={css(styles.footer)}/>
           </div>
       </React.Fragment>
     );
@@ -84,6 +84,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     minHeight: "60vmin",
   },
+
+  footer: {},
 });
 
 App.propTypes = {

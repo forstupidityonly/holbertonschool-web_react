@@ -6,7 +6,12 @@ import Header from '../Header/Header.js';
 import Login from '../Login/Login.js';
 import Footer from '../Footer/Footer.js';
 import CourseList from '../CourseList/CourseList.js';
+import { StyleSheetTestUtils } from 'aphrodite';
 import '../../config/setupTests';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('Test App', () => {
 
