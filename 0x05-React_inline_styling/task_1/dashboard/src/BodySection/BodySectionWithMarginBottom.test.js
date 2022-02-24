@@ -3,6 +3,11 @@ import React from 'react';
 import '../../config/setupTests';
 import BodySectionWithMarginBottom from './BodySectionWithMarginBottom';
 import BodySection from './BodySection';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('BodySectionWithMarginBottom', () => {
 

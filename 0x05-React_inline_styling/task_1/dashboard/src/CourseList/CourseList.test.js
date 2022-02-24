@@ -2,7 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import CourseList from './CourseList';
 import CourseListRow from './CourseListRow';
+import { StyleSheetTestUtils } from 'aphrodite';
 import '../../config/setupTests';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('test CourseList', () => {
 
