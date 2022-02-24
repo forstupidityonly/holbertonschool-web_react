@@ -1,4 +1,5 @@
 import logo from '../assets/logo.jpg';
+import React from 'react';
 import {getFullYear, getFooterCopy} from '../utils/utils.js';
 import { StyleSheet, css } from 'aphrodite';
 
