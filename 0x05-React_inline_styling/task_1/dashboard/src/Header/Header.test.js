@@ -2,6 +2,11 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import Header from './Header';
 import '../../config/setupTests';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe('Test Header', () => {
 
