@@ -5,12 +5,12 @@ import { StyleSheet, css } from 'aphrodite';
 
 function Header() {
   return (
-    <div className="Header">
+    <header className="Header">
       <div className={css(styles.Header)}>
         <img src={logo} className={css(styles.Logo)}  alt="logo" />
         <h1>School dashboard</h1>
       </div>
-    </div>
+    </header>
   );
 }
 
