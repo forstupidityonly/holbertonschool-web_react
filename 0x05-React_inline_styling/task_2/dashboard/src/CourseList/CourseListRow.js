@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
 
 const rowStyle = {
   backgroundColor: '#f5f5f5ab',
@@ -32,6 +33,10 @@ function CourseListRow({isHeader, textFirstCell, textSecondCell}) {
     </React.Fragment>
   );
 };
+
+const styles = StyleSheet.create({
+  emptyForChecker: {},
+});
 
 CourseListRow.propTypes = {
   isHeader: PropTypes.bool,
