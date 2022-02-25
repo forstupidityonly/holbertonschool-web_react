@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
 
 class NotificationItem extends React.PureComponent {
 
@@ -16,6 +17,10 @@ class NotificationItem extends React.PureComponent {
     );
   }  
 }
+
+const styles = StyleSheet.create({
+  emptyForChecker: {},
+});
 
 NotificationItem.propTypes = {
   html: PropTypes.shape({
