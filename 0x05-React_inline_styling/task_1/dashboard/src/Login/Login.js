@@ -1,10 +1,10 @@
-import './Login.css';
 import React from 'react';
 import {getFullYear, getFooterCopy} from '../utils/utils.js';
+import { StyleSheet, css } from 'aphrodite';
 
 function Login() {
   return (
-    <div className="Login">
+    <div className={css(styles.Login)}>
       <p>Login to access the full dashboard</p>
       <div className="form">
         <React.Fragment>
@@ -18,5 +18,15 @@ function Login() {
     </div>
   );
 }
+
+const styles = StyleSheet.create({
+  Login: {
+    color: '#000000',
+    fontWeight: 'bold',
+    minHeight: '60vmin',
+    padding: 32,
+    marginLeft: 20,
+  },
+});
 
 export default Login;

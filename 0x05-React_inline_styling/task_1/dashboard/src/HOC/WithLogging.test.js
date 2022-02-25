@@ -3,6 +3,11 @@ import React from 'react';
 import '../../config/setupTests';
 import Login from '../Login/Login.js';
 import WithLogging from './WithLogging.js';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 describe("test HOC WithLogging", () => {
   it("test console.log is called with Component default", () => {
