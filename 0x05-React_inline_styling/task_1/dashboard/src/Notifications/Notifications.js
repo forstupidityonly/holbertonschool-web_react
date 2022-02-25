@@ -80,6 +80,10 @@ class Notifications extends React.Component {
   }
 }
 
+const styles = StyleSheet.create({
+  EmptyForChecker: {},
+});
+
 const NotificationsStyle = {
     border: '2px dashed #df344b',
     padding: 4,
