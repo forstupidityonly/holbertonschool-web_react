@@ -4,6 +4,11 @@ import Notifications from './Notifications';
 import NotificationItem from './NotificationItem';
 import '../../config/setupTests';
 import {getFullYear, getFooterCopy, getLatestNotification} from '../utils/utils.js';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 const htmlObj = {
   __html: getLatestNotification(),

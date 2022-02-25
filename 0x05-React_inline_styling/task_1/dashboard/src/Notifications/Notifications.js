@@ -1,10 +1,10 @@
 import React from 'react';
-import './Notifications.css';
 import NotificationItem from './NotificationItem.js';
 import NotificationItemShape from './NotificationItemShape.js';
 import closeIcon from '../assets/close-icon.png';
 import {getLatestNotification} from '../utils/utils.js';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
 
 class Notifications extends React.Component {
 
@@ -31,9 +31,9 @@ class Notifications extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div className="menuItem">Your notifications</div>
+        <div className="menuItem" style={menuItem}>Your notifications</div>
         { this.props.displayDrawer && (
-          <div className="Notifications">
+          <div className="Notifications" style={NotificationsStyle}>
             { this.props.listNotifications.length > 0 ? (
               <React.Fragment>
                 <p style={{ display: "inline" }}>
@@ -78,6 +78,17 @@ class Notifications extends React.Component {
       </React.Fragment>
     );
   }
+}
+
+const NotificationsStyle = {
+    border: '2px dashed #df344b',
+    padding: 4,
+    width: '35%',
+    float: 'right',
+}
+const menuItem = {
+    display: 'flex',
+    justifyContent: 'flex-end',
 }
 
 Notifications.propTypes = {
