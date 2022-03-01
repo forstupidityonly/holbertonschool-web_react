@@ -34,7 +34,7 @@ class Notifications extends React.Component {
     const { displayDrawer, listNotifications, handleDisplayDrawer, handleHideDrawer } = this.props;
     return (
       <React.Fragment>
-        <div className="menuItem" style={menuItem} onClick={handleDisplayDrawer}>Your notifications</div>
+        <div className="menuItem" id="menuItem" style={menuItem} onClick={handleDisplayDrawer}>Your notifications</div>
         { this.props.displayDrawer && (
           <div className="Notifications" style={NotificationsStyle}>
             { this.props.listNotifications.length > 0 ? (
@@ -43,6 +43,8 @@ class Notifications extends React.Component {
                   Here is the list of notifications
                 </p>
                 <button
+                  className="closeButton"
+                  id="closeButton"
                   onClick={handleHideDrawer}
                   style={{
                     float: 'right',
