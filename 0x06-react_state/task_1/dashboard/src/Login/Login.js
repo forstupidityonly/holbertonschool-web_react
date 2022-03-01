@@ -49,7 +49,7 @@ class Login extends React.Component {
               <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChangeEmail} className="inputForm"></input>
               <label htmlFor="password">Password:</label>
               <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleChangePassword} className="inputForm"></input>
-              <input type="submit" value="OK" disabled={!this.state.enableSubmit}/>
+              <input type="submit" id="submit" value="OK" disabled={!this.state.enableSubmit}/>
             </div>
           </form>
         </div>
