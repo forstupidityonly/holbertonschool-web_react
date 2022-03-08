@@ -12,4 +12,4 @@ export default function printBestStudents(obj) {
     return myStu[key];
   });
   console.log(myStu);
-};
+}
