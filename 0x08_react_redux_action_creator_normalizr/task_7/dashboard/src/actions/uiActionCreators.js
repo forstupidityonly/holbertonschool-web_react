@@ -26,13 +26,13 @@ function hideNotificationDrawer() {
   }
 }
 
-function loginSuccess () {
+function loginSuccess() {
   return {
     type: LOGIN_SUCCESS
   }
 }
 
-function loginFailure () {
+function loginFailure() {
   return {
     type: LOGIN_FAILURE
   }
@@ -49,4 +49,4 @@ function loginRequest(email, password) {
   }
 }
 
-export { login, logout, displayNotificationDrawer, hideNotificationDrawer }
+export { login, logout, displayNotificationDrawer, hideNotificationDrawer, loginSuccess, loginFailure, loginRequest }
