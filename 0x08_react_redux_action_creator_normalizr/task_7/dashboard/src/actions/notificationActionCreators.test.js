@@ -1,5 +1,6 @@
 import { markAsAread, setNotificationFilter } from './notificationActionCreators.js'
 import { MARK_AS_READ, SET_TYPE_FILTER, NotificationTypeFilters } from './notificationActionTypes.js'
+import '../../config/setupTests'
 
 describe('Test Action Creators', () => {
 
