@@ -5,47 +5,33 @@ import { LOGIN,
          LOGIN_SUCCESS, 
          LOGIN_FAILURE 
        } from '../actions/uiActionTypes.js'
+import { Map } from 'immutable';
 
-const initalState = {
+const initalState = Map({
   isNotificationDrawerVisible: false,
   isUserLoggedIn: false,
   user: {},
-}
+})
 
 function uiReducer(state = initalState, action) {
   switch (action) {
     case DISPLAY_NOTIFICATION_DRAWER: {
-      return {
-        ...state,
-        isNotificationDrawerVisible: true,
-      }
+      return initalState.set("isNotificationDrawerVisible", true)
     }
     case HIDE_NOTIFICATION_DRAWER: {
-      return {
-        ...state,
-        isNotificationDrawerVisible: false,
-      }
+      return initalState.set("isNotificationDrawerVisible", false)
     }
     case LOGIN_SUCCESS: {
-      return {
-        ...state,
-        isUserLoggedIn: true,
-      }
+      return initalState.set("isUserLoggedIn", true)
     }
     case LOGIN_FAILURE: {
-      return {
-        ...state,
-        isUserLoggedIn: false,
-      }
+      return initalState.set("isUserLoggedIn", false)
     }
     case LOGOUT: {
-      return {
-        ...state,
-        isUserLoggedIn: false,
-      }
+      return initalState.set("isUserLoggedIn", false)
     }
     default:
-      return state
+      return initalState
   }
 }
 

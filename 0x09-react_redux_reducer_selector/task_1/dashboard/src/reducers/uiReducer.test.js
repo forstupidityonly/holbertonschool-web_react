@@ -23,7 +23,7 @@ describe('Test uiReducer', () => {
 
   it('when the action DISPLAY_NOTIFICATION_DRAWER is passed', () => {
     const recived = uiReducer(initalState, DISPLAY_NOTIFICATION_DRAWER)
-    expect(recived).toEqual({ isNotificationDrawerVisible: true, isUserLoggedIn: false, user: {} })
+    expect(recived.toJS()).toEqual({ isNotificationDrawerVisible: true, isUserLoggedIn: false, user: {} })
   })
 
 })
