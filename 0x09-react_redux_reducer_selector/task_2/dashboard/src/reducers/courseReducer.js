@@ -10,13 +10,20 @@ function courseReducer(state = [], action) {
         credit: myMap.credit,
       }))
     }
+    case SELECT_COURSE: {
+      return state.map((myMap) => ({
+        ...myMap,
+        isSelected: myMap.id === action.index ? true : false
+      }))
+    }
+    case UNSELECT_COURSE: {
+      return state.map((myMap) => ({
+        ...myMap,
+        isSelected: myMap.id === action.index ? false : true
+      }))
+    }
     default:
       return state
-  }
-  case SELECT_COURSE: {
-    return action.data.map((myMap) => ({
-
-    }))
   }
 }
 

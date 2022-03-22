@@ -2,6 +2,27 @@ import { courseReducer } from './courseReducer.js'
 import { SELECT_COURSE, UNSELECT_COURSE, FETCH_COURSE_SUCCESS } from '../actions/courseActionTypes.js'
 import '../../config/setupTests'
 
+const fake_state = [
+  {
+    id: 1,
+    name: "ES6",
+    isSelected: false,
+    credit: 60
+  },
+  {
+    id: 2,
+    name: "Webpack",
+    isSelected: false,
+    credit: 20
+  },
+  {
+    id: 3,
+    name: "React",
+    isSelected: false,
+    credit: 40
+  }
+]
+
 describe('Test courseReducer', () => {
 
   it('default state returns an empty array', () => {
@@ -79,7 +100,7 @@ describe('Test courseReducer', () => {
         credit: 40
       }
     ]
-    const recived = courseReducer([], select_course_action)
+    const recived = courseReducer(fake_state, select_course_action)
     expect(recived).toEqual(select_course_expected)
   })
 
