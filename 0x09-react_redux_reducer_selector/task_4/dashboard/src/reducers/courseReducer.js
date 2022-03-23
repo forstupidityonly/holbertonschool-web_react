@@ -2,7 +2,9 @@ import { SELECT_COURSE, UNSELECT_COURSE, FETCH_COURSE_SUCCESS } from '../actions
 import coursesNormalizer from '../schema/courses.js'
 import { Map, setIn } from 'immutable';
 
-function courseReducer(state = Map([]), action) {
+const initialState = []
+
+export const courseReducer = (state = new Map(initialState), action) => {
   switch (action.type) {
     case FETCH_COURSE_SUCCESS: {
       const myData = action.data.map((myMap) => ({
@@ -15,8 +17,8 @@ function courseReducer(state = Map([]), action) {
       return state.merge(normalizedData)
     }
     case SELECT_COURSE: {
-      return state.setIn(
-        ['entities', 'courses', action.index.toString(), 'isSelected'],
+      return setIn(
+        state, ['entities', 'courses', action.index.toString(), 'isSelected'],
         true
       )
     }
@@ -31,4 +33,3 @@ function courseReducer(state = Map([]), action) {
   }
 }
 
-export { courseReducer }
