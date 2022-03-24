@@ -20,4 +20,8 @@ function getAllNotificationsByUser(userID) {
   return (myReturn)
 }
 
-export { getAllNotificationsByUser, normalizedData }
+function notificationNormalizer(data) {
+  return normalize(data, theSchema)
+}
+
+module.exports = { getAllNotificationsByUser, normalizedData, notificationNormalizer }
