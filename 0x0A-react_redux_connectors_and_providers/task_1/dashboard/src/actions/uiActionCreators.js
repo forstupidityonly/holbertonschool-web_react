@@ -1,0 +1,54 @@
+import fetch from "node-fetch"
+import { LOGIN, LOGOUT, DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER, LOGIN_SUCCESS, LOGIN_FAILURE } from './uiActionTypes.js'
+
+function login(email, password) {
+  return {
+    type: LOGIN,
+    user: { email, password }
+  }
+}
+
+function logout() {
+  return {
+    type: LOGOUT
+  }
+}
+
+function displayNotificationDrawer() {
+  console.log('display notification drawer')
+  return {
+    type: DISPLAY_NOTIFICATION_DRAWER
+  }
+}
+
+function hideNotificationDrawer() {
+  console.log('hide notification drawer')
+  return {
+    type: HIDE_NOTIFICATION_DRAWER
+  }
+}
+
+function loginSuccess() {
+  return {
+    type: LOGIN_SUCCESS
+  }
+}
+
+function loginFailure() {
+  return {
+    type: LOGIN_FAILURE
+  }
+}
+
+function loginRequest(email, password) {
+  return function (dispatch) {
+    dispatch(login(email, password))
+    return (
+      fetch("/login-sucess.json")
+        .then(() => dispatch(loginSuccess()))
+        .catch(() => dispatch(loginFailure()))
+    )
+  }
+}
+
+export { login, logout, displayNotificationDrawer, hideNotificationDrawer, loginSuccess, loginFailure, loginRequest }
